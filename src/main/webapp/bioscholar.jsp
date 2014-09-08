@@ -46,7 +46,7 @@
 	attributes.name = "bioscholarSystem";
 	attributes.align = "middle";
 	attributes.style = "padding-top: 5px; padding-bottom: 5px;";
-	swfobject.embedSWF("bioscholarSystem.swf", "flashContent", "100%", "80%",
+	swfobject.embedSWF("bioscholarSystem.swf", "flashContent", "100%", "100%",
 			swfVersionStr, xiSwfUrlStr, flashvars, params, attributes);
 	swfobject.createCSS("#flashContent", "display:block;text-align:left;");
 </script>

@@ -4,7 +4,7 @@
 	<c:url value="/dash.jsp" var="dash" />
 	<c:url value="/digLib.jsp" var="digLib" />
 	<c:url value="/lapdftext.jsp" var="lapdftext" />
-	<c:url value="/designer.jsp" var="designer" />
+	<c:url value="/kefedDesigner.jsp" var="designer" />
 	<c:url value="/data.jsp" var="data" />
 
     <ul>
