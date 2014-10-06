@@ -288,7 +288,12 @@
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>vpdmfCore</artifactId>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>edu.isi.bmkeg</groupId>
+			<artifactId>vpdmfBigData</artifactId>
+		</dependency>
+		
 		<!-- <dependency> <groupId>edu.isi.bmkeg</groupId> <artifactId>vpdmfSpring</artifactId> 
 			</dependency> -->
 

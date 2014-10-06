@@ -11,6 +11,7 @@
 		<param-value>
 			WEB-INF/applicationContext.xml
 			WEB-INF/applicationContext-daoVpdmf.xml
+			WEB-INF/applicationContext-linkedData.xml
 			WEB-INF/applicationContext-secured.xml
 		</param-value>
 	</context-param>

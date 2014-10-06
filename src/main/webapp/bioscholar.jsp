@@ -7,7 +7,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <c:url value="/images/favicon.ico" var="iconImage" />
-<c:url value="/style/embedFlex.css" var="embedFlex_css" />
+<c:url value="/stylesheets/embedFlex.css" var="embedFlex_css" />
 <c:url value="/index.jsp" var="index" />
 
 <!-- saved from url=(0014)about:internet -->

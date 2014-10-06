@@ -27,7 +27,7 @@
 	<jsp:include page="WEB-INF/view/flex/flexHeader.jsp">
 		<jsp:param name="id" value="kefedDesigner" />
 		<jsp:param name="name" value="Experimental Design" />
-		<jsp:param name="swf" value="kefedDesignerComponent.swf" />
+		<jsp:param name="swf" value="kefedComponent.swf" />
 	</jsp:include>
 </head>
 
@@ -41,9 +41,9 @@
 		</header>
 		
 		<section>
-			<h2>Digital Library</h2>
+			<h2>KEfED Designer</h2>
 			<jsp:include page="WEB-INF/view/flex/flexComponent.jsp">
-				<jsp:param name="swf" value="kefedDesignerComponent.swf" />
+				<jsp:param name="swf" value="kefedComponent.swf" />
 			</jsp:include>
 		</section>
 

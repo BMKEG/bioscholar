@@ -1,10 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-  padding:50px;
+  padding:10px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
+  width="100%"
+  height="100%"
 }
 
 #flashContent {
@@ -132,7 +134,7 @@ img {
   border-radius:5px;
   border:1px solid #d2d2d2;
   box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:540px;
+  width:275px;
 }
 
 #navigation ul li { 
@@ -248,7 +250,7 @@ header a small {
 
 section {
   width:100%;
-  height:720px ;
+  height:600px ;
   padding-bottom:50px;
 }
 

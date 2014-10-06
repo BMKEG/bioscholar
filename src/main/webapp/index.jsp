@@ -33,17 +33,14 @@
 			<h1>The BioScholar System.</h1>
 				
 			<p>
-				The 'BioScholar' system was first described in our BMC Bioinformatics paper 
+				The 'BioScholar' system was first described in  
 				<a href="http://www.biomedcentral.com/1471-2105/12/351">(Russ et al. 2011)</a> 
-				as the first full implementation of a KEfED model. 
-				('KEfED' stands for 'Knowledge Engineering from Experimental Design' and 
-				is our approach to represent experimental observations with little or
-				 no additional domain-specific interpretation). <em>BioScholar</em> itself, 
-				 is intended to be an experimental knowledge management system
-				  curated from the scientific literature and specifically targeted to
-				   support early-stage biomedical researchers (graduate students 
-				   and postdocs) in facing the very first research challenge that they face: 
-				   making sense of the very large amount of existing knowledge in the literature.
+				as the first implementation of KEfED. 
+				('KEfED' stands for 'Knowledge Engineering from Experimental Design'). <em>BioScholar</em> 
+				 is an knowledge management system
+				  for the scientific literature targeted to
+				   support early-stage biomedical researchers facing their first research challenge: 
+				   making sense of the literature.
 			</p>
 
 			<jsp:include page="WEB-INF/view/includes/navigation.jspx" />
@@ -73,7 +70,7 @@
 			</p>
 		</section>
 		<footer>
-		<p><small>This work has been funded by NIH, the Kinetics Foundatoin and the Michael J. Fox Foundation for Parkinsons Research and DARPA </small></p>
+		<p><small>This work has been funded by NIH, the Kinetics Foundation, the Michael J. Fox Foundation for Parkinsons Research and DARPA </small></p>
 		<p><small>The Bioscholar System is a component of the <b>SciKnowSoft</b> toolset</small></p>
         <p><img src="images/SciKnowSoft_Panel.jpg"/></p>
 		</footer>

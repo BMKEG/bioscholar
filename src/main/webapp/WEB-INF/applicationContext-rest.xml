@@ -15,5 +15,6 @@
 	<context:component-scan base-package="edu.isi.bmkeg.lapdf" />
 	<context:component-scan base-package="edu.isi.bmkeg.kefed" />
 	<context:component-scan base-package="edu.isi.bmkeg.ooevv" />
+	<context:component-scan base-package="edu.isi.bmkeg.bioscholar.rest" />
 
 </beans>

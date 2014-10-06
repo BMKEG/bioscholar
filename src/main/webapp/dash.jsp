@@ -42,12 +42,10 @@
 		
 		<section>
 			<h2>Dashboard</h2>
-
-
 		</section>
 
 		<footer>
-			<p><small>This work has been funded by NIH, NSF, the Kinetics Foundatoin and the Michael J. Fox Foundation for Parkinsons Research and DARPA. The Bioscholar System is a component of the <b>SciKnowSoft</b> toolset</small></p>
+			<p><small>This work has been funded by NIH, NSF, the Kinetics Foundation, the Michael J. Fox Foundation for Parkinsons Research and DARPA. The Bioscholar System is a component of the <b>SciKnowSoft</b> toolset</small></p>
    	     	<p><img src="images/SciKnowSoft_Panel.jpg"/></p>
 		</footer>
 
