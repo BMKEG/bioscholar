@@ -22,8 +22,8 @@
 		<htmlwrapper.height>100%</htmlwrapper.height>
 		<htmlwrapper.bgcolor>#ffffff</htmlwrapper.bgcolor>
 		<htmlwrapper.title>Bioscholar Web Application</htmlwrapper.title>
-		<htmlwrapper.application>bioscholarSystem</htmlwrapper.application>
-		<htmlwrapper.swf>bioscholarSystem</htmlwrapper.swf>
+		<htmlwrapper.application>digitalLibraryComponent</htmlwrapper.application>
+		<htmlwrapper.swf>digitalLibraryComponent</htmlwrapper.swf>
 		<htmlwrapper.flashplayer.version.major>10</htmlwrapper.flashplayer.version.major>
 		<htmlwrapper.flashplayer.version.minor>2</htmlwrapper.flashplayer.version.minor>
 		<htmlwrapper.flashplayer.revision>0</htmlwrapper.flashplayer.revision>
@@ -300,7 +300,12 @@
 		<!-- Client App (in Flex) to be embedded within the WAR file. The html 
 			wrapper parameters ${htmlwrapper.swf} and ${htmlwrapper.application} (configured 
 			as properties above) should refer to this resource. -->
-
+		<dependency>
+			<groupId>edu.isi.bmkeg</groupId>
+			<artifactId>digitalLibraryComponent</artifactId>
+			<type>swf</type>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -463,7 +468,7 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</pluginRepository>
-		<pluginRepository>
+		<!--  <pluginRepository>
 			<id>flexpmd.opensource.adobe</id>
 			<releases>
 				<enabled>true</enabled>
@@ -473,7 +478,7 @@
 			</snapshots>
 			<name>FlexPMD repository on opensource.adobe.com</name>
 			<url>http://opensource.adobe.com/svn/opensource/flexpmd/maven-repository/release/</url>
-		</pluginRepository>
+		</pluginRepository>-->
 
 	</pluginRepositories>
 
