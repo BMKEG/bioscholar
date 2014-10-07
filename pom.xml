@@ -22,8 +22,8 @@
 		<htmlwrapper.height>100%</htmlwrapper.height>
 		<htmlwrapper.bgcolor>#ffffff</htmlwrapper.bgcolor>
 		<htmlwrapper.title>Bioscholar Web Application</htmlwrapper.title>
-		<htmlwrapper.application>digitalLibraryComponent</htmlwrapper.application>
-		<htmlwrapper.swf>digitalLibraryComponent</htmlwrapper.swf>
+		<htmlwrapper.application>digitalLibraryClientApp</htmlwrapper.application>
+		<htmlwrapper.swf>digitalLibraryClientApp</htmlwrapper.swf>
 		<htmlwrapper.flashplayer.version.major>10</htmlwrapper.flashplayer.version.major>
 		<htmlwrapper.flashplayer.version.minor>2</htmlwrapper.flashplayer.version.minor>
 		<htmlwrapper.flashplayer.revision>0</htmlwrapper.flashplayer.revision>
@@ -69,31 +69,19 @@
 				<version>6.1.16</version>
 			</plugin>
 
-			<!-- The goal copy-flex-resources is used to package a flex client application 
-				within the webapp directory. -->
-
 			<plugin>
-				<groupId>org.sonatype.flexmojos</groupId>
-				<artifactId>flexmojos-maven-plugin</artifactId>
-				<version>${flexmojos.version}</version>
-				<dependencies>
-					<dependency>
-						<groupId>com.adobe.flex</groupId>
-						<artifactId>compiler</artifactId>
-						<version>${flex.version}</version>
-						<type>pom</type>
-					</dependency>
-				</dependencies>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
+						<phase>prepare-package</phase>
 						<goals>
-							<goal>copy-flex-resources</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-							<webappDirectory>
-								${project.build.directory}/${project.build.finalName}
-							</webappDirectory>
 							<stripVersion>true</stripVersion>
+							<includeTypes>swf</includeTypes>
+							<outputDirectory>${project.build.directory}/${project.artifactId}</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
@@ -152,27 +140,6 @@
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>
-											org.sonatype.flexmojos
-										</groupId>
-										<artifactId>
-											flexmojos-maven-plugin
-										</artifactId>
-										<versionRange>
-											[4.2-beta,)
-										</versionRange>
-										<goals>
-											<goal>
-												copy-flex-resources
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
 											org.apache.maven.plugins
 										</groupId>
 										<artifactId>
@@ -187,6 +154,22 @@
 									</pluginExecutionFilter>
 									<action>
 										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<goals>
+											<goal>copy-dependencies</goal>
+											<goal>unpack</goal>
+										</goals>
+										<versionRange>[2.0,)</versionRange>
+									</pluginExecutionFilter>
+									<action>
+										<ignore>
+											<message>maven-dependency-plugin (goals "copy-dependencies", "unpack") is not supported by m2e.</message>
+										</ignore>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
@@ -256,7 +239,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>digitalLibraryDao</artifactId>
@@ -283,29 +266,27 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>vpdmfCore</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>vpdmfBigData</artifactId>
 		</dependency>
-		
-		<!-- <dependency> <groupId>edu.isi.bmkeg</groupId> <artifactId>vpdmfSpring</artifactId> 
-			</dependency> -->
+
 
 		<!-- Client App (in Flex) to be embedded within the WAR file. The html 
 			wrapper parameters ${htmlwrapper.swf} and ${htmlwrapper.application} (configured 
 			as properties above) should refer to this resource. -->
 		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
-			<artifactId>digitalLibraryComponent</artifactId>
+			<artifactId>digitalLibraryClientApp</artifactId>
 			<type>swf</type>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -325,27 +306,27 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<exclusions>
-	         <exclusion>
-	            <groupId>commons-logging</groupId>
-	            <artifactId>commons-logging</artifactId>
-	         </exclusion>
-	      </exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-				
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<exclusions>
-	         <exclusion>
-	            <groupId>commons-logging</groupId>
-	            <artifactId>commons-logging</artifactId>
-	         </exclusion>
-	      </exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<!-- Spring Framework Security -->
@@ -392,34 +373,34 @@
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
-	      <groupId>org.slf4j</groupId>
-	      <artifactId>jcl-over-slf4j</artifactId>
-	      <version>${slf4j.version}</version>
-	      <scope>runtime</scope>
-	   </dependency>
-	   
-	   <dependency>
-	      <groupId>org.slf4j</groupId>
-	      <artifactId>slf4j-api</artifactId>
-	      <version>${slf4j.version}</version>
-	      <scope>runtime</scope>
-	   </dependency>
-	   
-	   <dependency>
-	      <groupId>org.slf4j</groupId>
-	      <artifactId>slf4j-log4j12</artifactId>
-	      <version>${slf4j.version}</version>
-	      <scope>runtime</scope>
-	   </dependency>
-	   
-	   <dependency>
-	      <groupId>log4j</groupId>
-	      <artifactId>log4j</artifactId>
-	      <version>${log4j.version}</version>
-	      <scope>runtime</scope>
-	   </dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
 
 		<!-- Servlet -->
 
@@ -448,17 +429,17 @@
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf-spring3</artifactId>
 		</dependency>
-		
+
 		<dependency>
-				<groupId>org.apache.tiles</groupId>
-				<artifactId>tiles-jsp</artifactId>
-				<version>3.0.1</version>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>3.0.1</version>
 		</dependency>
 
 	</dependencies>
 
 	<pluginRepositories>
-		<pluginRepository> 
+		<pluginRepository>
 			<id>flex-mojos-repository</id>
 			<url>http://repository.sonatype.org/content/groups/flexgroup/</url>
 			<releases>
@@ -468,17 +449,10 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</pluginRepository>
-		<!--  <pluginRepository>
-			<id>flexpmd.opensource.adobe</id>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<name>FlexPMD repository on opensource.adobe.com</name>
-			<url>http://opensource.adobe.com/svn/opensource/flexpmd/maven-repository/release/</url>
-		</pluginRepository>-->
+		<!-- <pluginRepository> <id>flexpmd.opensource.adobe</id> <releases> <enabled>true</enabled> 
+			</releases> <snapshots> <enabled>false</enabled> </snapshots> <name>FlexPMD 
+			repository on opensource.adobe.com</name> <url>http://opensource.adobe.com/svn/opensource/flexpmd/maven-repository/release/</url> 
+			</pluginRepository> -->
 
 	</pluginRepositories>
 
