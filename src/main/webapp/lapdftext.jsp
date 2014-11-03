@@ -48,8 +48,11 @@
 		</section>
 
 		<footer>
-			<p><small>This work has been funded by NIH, NSF, the Kinetics Foundation and the Michael J. Fox Foundation for Parkinsons Research and DARPA. The Bioscholar System is a component of the <b>SciKnowSoft</b> toolset</small></p>
-   	     	<p><img src="images/SciKnowSoft_Panel.jpg"/></p>
+		<p><small>This work has been funded by NIH, the Kinetics Foundation, the Michael J. Fox Foundation for Parkinsons Research and DARPA. 
+		The Bioscholar System is developed at the University of Southern California's Information Sciences Institute</small></p>
+        <p><img width="150px" src="images/usc/viterbi.jpg"/>
+        <img width="250px" src="images/usc/isi.jpg"/>
+        </p>
 		</footer>
 
 </body>

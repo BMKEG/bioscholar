@@ -27,8 +27,12 @@
 	<jsp:include page="WEB-INF/view/flex/flexHeader.jsp">
 		<jsp:param name="id" value="diglib" />
 		<jsp:param name="name" value="Digital Library" />
-		<jsp:param name="swf" value="digitalLibraryComponent.swf" />
+		<jsp:param name="swf" value="digitalLibraryClientApp.swf" />
 	</jsp:include>
+
+	<!-- Javascript to store state data as a cookie-->
+	<script type="text/javascript" src="vpdmf.js"></script>
+	
 </head>
 
 <body>
@@ -36,22 +40,27 @@
 	<div class="wrapper">
 
 		<header>
-			<h1>The BioScholar System.</h1>
-			<jsp:include page="WEB-INF/view/includes/appNavigation.jspx" /> 
-		</header>
-		
+		<h1>The BioScholar System.</h1>
+		<jsp:include page="WEB-INF/view/includes/appNavigation.jspx" /> </header>
+
 		<section>
-			<h2>Digital Library</h2>
-			<jsp:include page="WEB-INF/view/flex/flexComponent.jsp">
-				<jsp:param name="swf" value="digitalLibraryComponent.swf" />
-			</jsp:include>
-		</section>
+		<h2>Digital Library</h2>
+		<jsp:include page="WEB-INF/view/flex/flexComponent.jsp">
+			<jsp:param name="swf" value="digitalLibraryClientApp.swf" />
+		</jsp:include> </section>
 
 		<footer>
-			<p><small>This work has been funded by NIH, NSF, the Kinetics Foundation and the Michael J. Fox Foundation for Parkinsons Research and DARPA. The Bioscholar System is a component of the <b>SciKnowSoft</b> toolset</small></p>
-   	     	<p><img src="images/SciKnowSoft_Panel.jpg"/></p>
+		<p>
+			<small>This work has been funded by NIH, the Kinetics
+				Foundation, the Michael J. Fox Foundation for Parkinsons Research
+				and DARPA. The Bioscholar System is developed at the University of
+				Southern California's Information Sciences Institute</small>
+		</p>
+		<p>
+			<img width="150px" src="images/usc/viterbi.jpg" /> <img width="250px"
+				src="images/usc/isi.jpg" />
+		</p>
 		</footer>
-
 </body>
 
 </html>
