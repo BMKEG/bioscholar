@@ -8,9 +8,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
  
- 	<bean id="bigData" class="edu.isi.bmkeg.vpdmf.bigdata.BigDataBean">
+<!--  	<bean id="bigData" class="edu.isi.bmkeg.vpdmf.bigdata.BigDataBean">
 	  <constructor-arg type="String" value="#{bmkegProperties.workingDirectory}/lod/obi.jnl"/> 
 	  <constructor-arg type="String" value="#{bmkegProperties.workingDirectory}/lod"/>
 	  <constructor-arg type="String" value="http://bmkeg.isi.edu/kefed/"/>
-	</bean>
+	</bean> -->
 </beans>
