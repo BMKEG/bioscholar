@@ -27,7 +27,7 @@
 	<jsp:include page="WEB-INF/view/flex/flexHeader.jsp">
 		<jsp:param name="id" value="kefedDesigner" />
 		<jsp:param name="name" value="Experimental Design" />
-		<jsp:param name="swf" value="kefedComponent.swf" />
+		<jsp:param name="swf" value="kefedClientApp.swf" />
 	</jsp:include>
 	
 	<!-- Javascript to store state data as a cookie-->
@@ -47,7 +47,7 @@
 		<section>
 			<h2>KEfED Designer</h2>
 			<jsp:include page="WEB-INF/view/flex/flexComponent.jsp">
-				<jsp:param name="swf" value="kefedComponent.swf" />
+				<jsp:param name="swf" value="kefedClientApp.swf" />
 			</jsp:include>
 		</section>
 

@@ -278,7 +278,6 @@
 			<artifactId>vpdmfBigData</artifactId>
 		</dependency>
 
-
 		<!-- Client App (in Flex) to be embedded within the WAR file. The html 
 			wrapper parameters ${htmlwrapper.swf} and ${htmlwrapper.application} (configured 
 			as properties above) should refer to this resource. -->
@@ -287,6 +286,18 @@
 			<artifactId>digitalLibraryClientApp</artifactId>
 			<type>swf</type>
 		</dependency>
+
+		<dependency>
+			<groupId>edu.isi.bmkeg</groupId>
+			<artifactId>lapdftextClientApp</artifactId>
+			<type>swf</type>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>edu.isi.bmkeg</groupId>
+			<artifactId>bioscholarSystem</artifactId>
+			<type>swf</type>
+		</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework</groupId>
