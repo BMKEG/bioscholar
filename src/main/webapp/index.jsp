@@ -8,6 +8,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <c:url value="/index.jsp" var="index" />
+<c:url value="/images/favicon.ico" var="iconImage" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -15,8 +16,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>BioScholar: A Knowledge Base for Biology derived from the Scientific Literature</title>
 	
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="${iconImage}" type="image/x-icon" />
 <link href="stylesheets/styles.css" rel="stylesheet" />
+
 <link href="stylesheets/pygment_trac.css" rel="stylesheet" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>

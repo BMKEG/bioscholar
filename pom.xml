@@ -293,11 +293,17 @@
 			<type>swf</type>
 		</dependency>
 
-		<!-- <dependency>
+		<dependency>
+			<groupId>edu.isi.bmkeg</groupId>
+			<artifactId>kefedClientApp</artifactId>
+			<type>swf</type>
+		</dependency>
+
+		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>bioscholarSystem</artifactId>
 			<type>swf</type>
-		</dependency> -->
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>

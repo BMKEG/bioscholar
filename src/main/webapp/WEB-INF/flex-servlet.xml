@@ -24,7 +24,7 @@
 	</flex:message-broker>
 
 	<flex:message-destination id="serverUpdates" channels="my-polling-amf" />
-
+	
 	<!-- Try waiting until after the flex beans are 
 		instantiated before scanning for services.
 		Placing this command here, allows us to autoinject 

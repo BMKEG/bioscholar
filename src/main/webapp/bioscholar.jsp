@@ -7,15 +7,16 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <c:url value="/images/favicon.ico" var="iconImage" />
-<c:url value="/stylesheets/embedFlex.css" var="embedFlex_css" />
-<c:url value="/index.jsp" var="index" />
+<c:url value="/stylesheets/embedFlex2.css" var="embedFlex_css2" />
 
 <!-- saved from url=(0014)about:internet -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
 <title>BioScholar System</title>
+
 <link rel="shortcut icon" href="${iconImage}" type="image/x-icon" />
+<link href="${embedFlex_css2}" rel="stylesheet" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Include CSS to eliminate any default margins/padding and set the height of the html element and 
@@ -29,6 +30,8 @@
 <link rel="stylesheet" type="text/css"
 	href="history/history.css" />
 <script type="text/javascript" src="history/history.js"></script>
+
+
 <!-- END Browser History required section -->
 
 <script type="text/javascript" src="swfobject.js"></script>
@@ -50,10 +53,6 @@
 			swfVersionStr, xiSwfUrlStr, flashvars, params, attributes);
 	swfobject.createCSS("#flashContent", "display:block;text-align:left;");
 </script>
-
-<!-- SCIKNOWSOFT STYLESHEET -->
-<link href="${embedFlex_css}" rel="stylesheet" />
-<!-- ~~~~~~~~~~~~~~~~~~~~~~ -->
 
 </head>
 <body>

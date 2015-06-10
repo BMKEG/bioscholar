@@ -8,6 +8,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <c:url value="/index.jsp" var="index" />
+<c:url value="/images/favicon.ico" var="iconImage" />
+<c:url value="/stylesheets/embedFlex.css" var="embedFlex_css" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -16,8 +18,9 @@
 <title>BioScholar: A Knowledge Base for Biology derived from the
 	Scientific Literature</title>
 
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-<link href="stylesheets/embedFlex.css" rel="stylesheet" />
+<link rel="shortcut icon" href="${iconImage}" type="image/x-icon" />
+<link href="${embedFlex_css}" rel="stylesheet" />
+
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no">
 	<!--[if lt IE 9]>
@@ -27,7 +30,7 @@
 	<jsp:include page="WEB-INF/view/flex/flexHeader.jsp">
 		<jsp:param name="id" value="lapdftext" />
 		<jsp:param name="name" value="Layout Aware PDF to Text" />
-		<jsp:param name="swf" value="lapdftextComponent.swf" />
+		<jsp:param name="swf" value="lapdftextClientApp.swf" />
 	</jsp:include>
 </head>
 
@@ -43,7 +46,7 @@
 		<section>
 			<h2>PDF Text Extraction</h2>
 			<jsp:include page="WEB-INF/view/flex/flexComponent.jsp">
-				<jsp:param name="swf" value="lapdftextComponent.swf" />
+				<jsp:param name="swf" value="lapdftextClientApp.swf" />
 			</jsp:include>
 		</section>
 

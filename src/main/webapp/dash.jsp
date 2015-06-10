@@ -7,6 +7,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
+<c:url value="/images/favicon.ico" var="iconImage" />
+<c:url value="/stylesheets/embedFlex.css" var="embedFlex_css" />
 <c:url value="/index.jsp" var="index" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,7 +18,7 @@
 <title>BioScholar: A Knowledge Base for Biology derived from the
 	Scientific Literature</title>
 
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 <link href="stylesheets/embedFlex.css" rel="stylesheet" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no">
