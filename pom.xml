@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.isi.bmkeg</groupId>
 	<artifactId>bioscholar</artifactId>
-	<version>1.1.0-SNAPSHOT</version>
+	<version>1.1.5-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<parent>
