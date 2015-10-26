@@ -303,6 +303,12 @@
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>bioscholarSystem</artifactId>
 			<type>swf</type>
+			<exclusions>
+				<exclusion>
+					<artifactId>as3commons-collections</artifactId>
+					<groupId>org.as3commons</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -387,7 +393,6 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>${spring.version}</version>
 			<type>jar</type>
 			<scope>test</scope>
 		</dependency>

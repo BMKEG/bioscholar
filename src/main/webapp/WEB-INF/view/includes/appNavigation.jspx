@@ -5,15 +5,14 @@
 	<c:url value="/digLib.jsp" var="digLib" />
 	<c:url value="/lapdftext.jsp" var="lapdftext" />
 	<c:url value="/kefedDesigner.jsp" var="designer" />
-	<c:url value="/data.jsp" var="data" />
+	<c:url value="/kefedData.jsp" var="data" />
 
     <ul>
         <li><a href="${home}"><strong>Home</strong>page</a></li>
-       <!--  <li><a href="${dash}"><strong>Dash</strong>board</a></li> -->
         <li><a href="${digLib}"><strong>Digital</strong>library</a></li>
         <li><a href="${lapdftext}"><strong>PDF</strong>extraction</a></li>
-        <li><a href="${designer}"><strong>KEfED</strong>designer</a></li>
-       <!--  <li><a href="${data}"><strong>KEfED</strong>data</a></li>  -->
+        <li><a href="${designer}"><strong>KEfED</strong>models</a></li>
+        <li><a href="${data}"><strong>KEfED</strong>data</a></li>
     </ul>
 
 </div>
