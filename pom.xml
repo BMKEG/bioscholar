@@ -273,10 +273,10 @@
 			<artifactId>vpdmfCore</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>vpdmfBigData</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!-- Client App (in Flex) to be embedded within the WAR file. The html 
 			wrapper parameters ${htmlwrapper.swf} and ${htmlwrapper.application} (configured 
