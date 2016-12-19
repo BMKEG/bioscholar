@@ -198,13 +198,13 @@
 
 		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
-			<artifactId>vpdmf-bioscholar-jpa</artifactId>
+			<artifactId>vpdmf-digitalLibrary-jpa</artifactId>
 			<type>jar</type>
 		</dependency>
 
 		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
-			<artifactId>vpdmf-bioscholar-services</artifactId>
+			<artifactId>vpdmf-digitalLibrary-services</artifactId>
 			<type>jar</type>
 		</dependency>
 
@@ -246,18 +246,6 @@
 			<artifactId>digitalLibraryDao</artifactId>
 			<exclusions>
 				<exclusion>
-					<artifactId>vpdmf-digitalLibrary-jpa</artifactId>
-					<groupId>edu.isi.bmkeg</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>vpdmf-digitalLibrary</artifactId>
-					<groupId>edu.isi.bmkeg</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>vpdmf-digitalLibrary-services</artifactId>
-					<groupId>edu.isi.bmkeg</groupId>
-				</exclusion>
-				<exclusion>
 					<artifactId>vpdmf-ftd</artifactId>
 					<groupId>edu.isi.bmkeg</groupId>
 				</exclusion>
@@ -293,13 +281,13 @@
 			<type>swf</type>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>kefedClientApp</artifactId>
 			<type>swf</type>
-		</dependency>
+		</dependency> -->
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<artifactId>bioscholarSystem</artifactId>
 			<type>swf</type>
@@ -309,7 +297,7 @@
 					<groupId>org.as3commons</groupId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework</groupId>
